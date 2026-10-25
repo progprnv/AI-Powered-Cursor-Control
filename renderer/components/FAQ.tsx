@@ -11,10 +11,9 @@ const FAQ_ITEMS: FAQItem[] = [
     q: 'How do I invoke AICursor?',
     a: (
       <>
-        Hold <kbd>Right-Cmd</kbd> for 200ms over the content you want to ask
+        Hold the <b>left mouse button</b> for 200ms over the content you want to ask
         about. You can also click the small status pill at the bottom-center of
-        your screen (it expands on hover). On Windows / Linux the trigger is{' '}
-        <kbd>Right-Ctrl</kbd>.
+        your screen (it expands on hover).
       </>
     ),
   },
@@ -132,7 +131,7 @@ const FAQ_ITEMS: FAQItem[] = [
     a: (
       <>
         While the box is open, <b>hold the trigger key a second time</b>{' '}
-        (Right-Cmd / Right-Ctrl). The cursor switches to a crosshair and a
+        (left mouse button). The cursor switches to a crosshair and a
         small hint pill appears. Click and drag a rectangle over the content
         you want — a lime-bordered selection follows the drag with a live size
         readout. Release the mouse to capture; that region replaces the
@@ -214,7 +213,7 @@ const FAQ_ITEMS: FAQItem[] = [
     q: 'Keyboard shortcuts',
     a: (
       <>
-        <kbd>Right-Cmd</kbd> / <kbd>Right-Ctrl</kbd> hold 200ms → trigger.
+        Hold the <b>left mouse button</b> for 200ms → trigger.
         Hold again over an open box → arm region selection. <kbd>ESC</kbd> →
         dismiss. <kbd>Enter</kbd> → submit. <kbd>↑</kbd> / <kbd>↓</kbd> →
         navigate the command autocomplete. <kbd>Tab</kbd> → complete a

@@ -65,6 +65,7 @@ export type ProviderSettings = {
 
 export type TriggerHotkey =
   | 'MetaRight'
+  | 'CtrlLeft'
   | 'CtrlRight'
   | 'AltRight'
   | 'ShiftRight';

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 type Props = {
   // Show the splash only on the very first render after the app mounts.
-  // It auto-dismisses after ~1.8s and is suppressed during AI mode.
+  // It auto-dismisses after 6s and is suppressed during AI mode.
   enabled: boolean;
   onDismiss?: () => void;
 };
@@ -16,7 +16,7 @@ export function Splash({ enabled, onDismiss }: Props) {
       setVisible(false);
       return;
     }
-    const fadeOut = window.setTimeout(() => setVisible(false), 1800);
+    const fadeOut = window.setTimeout(() => setVisible(false), 6000);
     return () => window.clearTimeout(fadeOut);
   }, [enabled]);
 
@@ -69,6 +69,7 @@ export function Splash({ enabled, onDismiss }: Props) {
                 className="text-[44px] font-semibold tracking-tight leading-none"
                 style={{
                   fontFeatureSettings: '"ss01" on',
+                  color: '#fff',
                   textShadow: '0 2px 8px rgba(0,0,0,0.45), 0 1px 2px rgba(0,0,0,0.3)',
                 }}
               >
@@ -79,10 +80,13 @@ export function Splash({ enabled, onDismiss }: Props) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.4 }}
-                className="text-[12px] font-medium uppercase tracking-[0.3em] text-white/72"
-                style={{ textShadow: '0 1px 3px rgba(0,0,0,0.55), 0 1px 1px rgba(0,0,0,0.4)' }}
+                className="text-[12px] font-medium uppercase tracking-[0.3em]"
+                style={{
+                  color: '#fff',
+                  textShadow: '0 1px 3px rgba(0,0,0,0.55), 0 1px 1px rgba(0,0,0,0.4)',
+                }}
               >
-                hold right-cmd · ask anything
+                hold left mouse · ask anything
               </motion.p>
             </motion.div>
           </motion.div>

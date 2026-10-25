@@ -748,7 +748,10 @@ export const PromptInput = forwardRef<HTMLDivElement, Props>(function PromptInpu
                   </div>
                 ) : (
                   <div className="relative">
-                    <div className="max-h-[360px] overflow-y-auto pr-1" style={{ scrollbarWidth: 'thin' }}>
+                    <div
+                      className="max-h-[360px] select-text overflow-y-auto pr-1"
+                      style={{ scrollbarWidth: 'thin' }}
+                    >
                       <ToolActivity activities={activities} />
                       <Markdown text={response} />
                       {streaming && (

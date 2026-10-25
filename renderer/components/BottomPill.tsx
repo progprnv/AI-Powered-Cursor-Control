@@ -65,7 +65,7 @@ export const BottomPill = forwardRef<HTMLDivElement, Props>(function BottomPill(
             >
               <span className="font-medium tracking-wide text-white dark:text-neutral-900">AICursor</span>
               <span className="opacity-75">
-                {hasKey ? 'hold Right-Cmd · click here' : 'no API key · /settings'}
+                {hasKey ? 'hold Left Mouse · click here' : 'no API key · /settings'}
               </span>
               {webOn && hasKey && (
                 <span className="rounded-full border border-accent/40 bg-accent/15 px-1.5 py-0.5 text-[9.5px] font-semibold uppercase tracking-wider text-accent">

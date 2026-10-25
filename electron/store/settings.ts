@@ -60,7 +60,7 @@ type Schema = {
   memorySaveEnabled: boolean;
   maxContextTokens: number;
   voiceLanguage: string;
-  triggerHotkey: 'MetaRight' | 'CtrlRight' | 'AltRight' | 'ShiftRight';
+  triggerHotkey: 'MetaRight' | 'CtrlLeft' | 'CtrlRight' | 'AltRight' | 'ShiftRight';
   userProfile: UserProfile;
   // GDPR-friendly default: profile data is NOT injected into the system
   // prompt unless the user explicitly opts in.
@@ -87,8 +87,8 @@ const DEFAULT_USER_PROFILE: UserProfile = {
   preferredLanguage: '',
 };
 
-const defaultTriggerHotkey = (): 'MetaRight' | 'CtrlRight' =>
-  process.platform === 'darwin' ? 'MetaRight' : 'CtrlRight';
+const defaultTriggerHotkey = (): 'MetaRight' | 'CtrlLeft' =>
+  process.platform === 'darwin' ? 'MetaRight' : 'CtrlLeft';
 
 const DEFAULT_PROVIDERS: Record<ProviderId, ProviderSettings> = {
   openrouter: { apiKey: '', enabled: true },
@@ -292,7 +292,12 @@ function applyMigratedValues(target: Store<Schema>, src: Record<string, unknown>
   setIf('voiceLanguage', (v) => typeof v === 'string');
   setIf(
     'triggerHotkey',
-    (v) => v === 'MetaRight' || v === 'CtrlRight' || v === 'AltRight' || v === 'ShiftRight',
+    (v) =>
+      v === 'MetaRight' ||
+      v === 'CtrlLeft' ||
+      v === 'CtrlRight' ||
+      v === 'AltRight' ||
+      v === 'ShiftRight',
   );
   setIf('userProfile', (v) => !!v && typeof v === 'object');
   setIf('personalizePrompts', (v) => typeof v === 'boolean');
@@ -405,7 +410,10 @@ export function getSettings(): Settings {
     memorySaveEnabled: store.get('memorySaveEnabled'),
     maxContextTokens: store.get('maxContextTokens'),
     voiceLanguage: store.get('voiceLanguage') ?? 'auto',
-    triggerHotkey: store.get('triggerHotkey') ?? defaultTriggerHotkey(),
+    triggerHotkey:
+      store.get('triggerHotkey') === 'CtrlRight'
+        ? 'CtrlLeft'
+        : store.get('triggerHotkey') ?? defaultTriggerHotkey(),
     userProfile: { ...DEFAULT_USER_PROFILE, ...(store.get('userProfile') ?? {}) },
     personalizePrompts: store.get('personalizePrompts') ?? false,
     dismissOnDoubleClick: store.get('dismissOnDoubleClick') ?? true,
@@ -467,6 +475,7 @@ export function setSettings(patch: Partial<Settings>): Settings {
   }
   if (
     patch.triggerHotkey === 'MetaRight' ||
+    patch.triggerHotkey === 'CtrlLeft' ||
     patch.triggerHotkey === 'CtrlRight' ||
     patch.triggerHotkey === 'AltRight' ||
     patch.triggerHotkey === 'ShiftRight'

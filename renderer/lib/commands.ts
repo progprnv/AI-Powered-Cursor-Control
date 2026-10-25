@@ -127,7 +127,7 @@ The model can call tools mid-answer:
 Web search via \`/web <question>\` or auto-detected from intent.
 
 ## Gestures
-- Hold Right-Cmd / Right-Ctrl 200 ms → trigger. Hold again over an open box → arm region selection.
+- Hold the left mouse button for 200 ms → trigger. Hold again over an open box → arm region selection.
 - ESC → dismiss / cancel selection. Enter → submit. ↑/↓ → navigate autocomplete. Tab → complete.
 - Drag the box header (or any empty area inside it) → reposition.
 - Double-click outside the box → dismiss (switchable to single-click in Settings → Behaviour).

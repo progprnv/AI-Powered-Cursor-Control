@@ -25,7 +25,7 @@
 
 ## What it is
 
-AICursor is an open-source desktop overlay. You hold a key (default: Right-Cmd on macOS, Right-Ctrl on Windows/Linux), a glassmorphism box pops up next to your cursor, you ask a question, and a vision-capable LLM answers about whatever's around the cursor. A screenshot of the cursor region, your prompt, and (optionally) your clipboard get sent to the provider you configured. You keep your own API key, you pay for your own tokens, nothing is logged anywhere.
+AICursor is an open-source desktop overlay. You hold the left mouse button for 200 ms, a glassmorphism box pops up next to your cursor, you ask a question, and a vision-capable LLM answers about whatever's around the cursor. A screenshot of the cursor region, your prompt, and (optionally) your clipboard get sent to the provider you configured. You keep your own API key, you pay for your own tokens, nothing is logged anywhere.
 
 MIT-licensed, no framework lock-in, no cloud account. For longer autonomous tasks, AICursor points you at [Skales](https://skales.app), a larger AI agent.
 
@@ -64,7 +64,7 @@ On first launch you'll be prompted to grant **Accessibility** (for the global ke
 
 ## How to use
 
-1. Hold **Right-Cmd** (macOS) or **Right-Ctrl** (Windows / Linux) for 200 ms over the content you want help with. Or click the small status pill at the bottom of your screen.
+1. Hold the **left mouse button** for 200 ms over the content you want help with. Or click the small status pill at the bottom of your screen.
 2. The box opens beside your cursor. Type a question, press Enter.
 3. Use **/** to see the commands. Plain language works too. AICursor auto-detects the intent (summarise, translate, explain, code, etc.) across languages.
 4. Hover the answer for **Read** (text-to-speech), **Save** (HTML/PDF/MD), **Copy**.

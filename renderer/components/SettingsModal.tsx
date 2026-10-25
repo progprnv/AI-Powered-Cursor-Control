@@ -33,7 +33,8 @@ const VOICE_LANGUAGES: Array<{ value: string; label: string }> = [
 
 const TRIGGER_HOTKEYS: Array<{ value: TriggerHotkey; label: string }> = [
   { value: 'MetaRight', label: 'Right Cmd / Meta · default on macOS' },
-  { value: 'CtrlRight', label: 'Right Ctrl · default on Windows / Linux' },
+  { value: 'CtrlLeft', label: 'Left Ctrl · default on Windows / Linux' },
+  { value: 'CtrlRight', label: 'Right Ctrl' },
   { value: 'AltRight', label: 'Right Option / Alt' },
   { value: 'ShiftRight', label: 'Right Shift' },
 ];

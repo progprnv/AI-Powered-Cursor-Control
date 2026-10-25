@@ -3,9 +3,9 @@ import { screen } from 'electron';
 import { getSettings } from '../store/settings';
 
 const HOLD_KEY_MS = 200;
-const HOLD_MOUSE_MS = 250;
-const RIGHT_MOUSE_BUTTON = 2;
 const LEFT_MOUSE_BUTTON = 1;
+const HOLD_MOUSE_MS = 200;
+const MOUSE_TRIGGER_MOVE_PX = 6;
 const DOUBLE_CLICK_MS = 450;
 const OUTSIDE_HALO_PX = 14;
 
@@ -37,6 +37,7 @@ export function setActiveBoxBounds(b: BoxBounds | null): void {
 // changes take effect immediately without restarting the app.
 const HOTKEY_MAP: Record<string, number> = {
   MetaRight: UiohookKey.MetaRight,
+  CtrlLeft: UiohookKey.Ctrl,
   CtrlRight: UiohookKey.CtrlRight,
   AltRight: UiohookKey.AltRight,
   ShiftRight: UiohookKey.ShiftRight,
@@ -44,7 +45,7 @@ const HOTKEY_MAP: Record<string, number> = {
 
 function currentTriggerKeycode(): number {
   const hk = getSettings().triggerHotkey;
-  return HOTKEY_MAP[hk] ?? (process.platform === 'darwin' ? UiohookKey.MetaRight : UiohookKey.CtrlRight);
+  return HOTKEY_MAP[hk] ?? (process.platform === 'darwin' ? UiohookKey.MetaRight : UiohookKey.Ctrl);
 }
 
 type State = 'idle' | 'pending' | 'active';
@@ -68,6 +69,7 @@ let pendingKind: PendingKind | null = null;
 let listeners: Listeners | null = null;
 let attached = false;
 let selectionArmed = false;
+let pendingMouseOrigin: { x: number; y: number } | null = null;
 
 function clearPending(): void {
   if (pendingTimer) {
@@ -75,6 +77,7 @@ function clearPending(): void {
     pendingTimer = null;
   }
   pendingKind = null;
+  pendingMouseOrigin = null;
   if (state === 'pending') state = 'idle';
 }
 
@@ -140,16 +143,27 @@ function onMousedown(e: UiohookMouseEvent): void {
     return;
   }
 
-  // Right-mouse long-press still triggers AI mode from idle.
-  if (e.button !== RIGHT_MOUSE_BUTTON) return;
+  // Left-mouse long-press triggers AI mode from idle.
+  if (e.button !== LEFT_MOUSE_BUTTON) return;
   if (state !== 'idle') return;
   state = 'pending';
   pendingKind = 'mouse';
+  pendingMouseOrigin = { x: e.x, y: e.y };
   pendingTimer = setTimeout(() => {
     pendingTimer = null;
     pendingKind = null;
+    pendingMouseOrigin = null;
     fireStart();
   }, HOLD_MOUSE_MS);
+}
+
+function onMousemove(e: UiohookMouseEvent): void {
+  if (state !== 'pending' || pendingKind !== 'mouse' || !pendingMouseOrigin) return;
+  const dx = e.x - pendingMouseOrigin.x;
+  const dy = e.y - pendingMouseOrigin.y;
+  if (Math.hypot(dx, dy) > MOUSE_TRIGGER_MOVE_PX) {
+    clearPending();
+  }
 }
 
 function handleOutsideClick(): void {
@@ -191,7 +205,7 @@ function handleOutsideClick(): void {
 }
 
 function onMouseup(e: UiohookMouseEvent): void {
-  if (e.button !== RIGHT_MOUSE_BUTTON) return;
+  if (e.button !== LEFT_MOUSE_BUTTON) return;
   if (state === 'pending' && pendingKind === 'mouse') {
     clearPending();
   }
@@ -204,6 +218,7 @@ export function startTriggerDetection(l: Listeners): void {
   uIOhook.on('keyup', onKeyup);
   uIOhook.on('mousedown', onMousedown);
   uIOhook.on('mouseup', onMouseup);
+  uIOhook.on('mousemove', onMousemove);
   attached = true;
 }
 
@@ -213,6 +228,7 @@ export function stopTriggerDetection(): void {
   uIOhook.off('keyup', onKeyup);
   uIOhook.off('mousedown', onMousedown);
   uIOhook.off('mouseup', onMouseup);
+  uIOhook.off('mousemove', onMousemove);
   attached = false;
   clearPending();
   state = 'idle';
