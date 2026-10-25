@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ipc } from '../lib/ipc';

@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { systemPreferences, shell } from 'electron';
 import type { PermissionsStatus } from './types';
 import { canCaptureScreen } from './capture/screenshot';

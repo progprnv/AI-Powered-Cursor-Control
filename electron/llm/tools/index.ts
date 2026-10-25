@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 // Tool registry for OpenRouter function calling.
 // Each tool has a JSON-schema declaration sent to the LLM, plus an executor
 // that runs on the main process and returns a string result (which gets fed

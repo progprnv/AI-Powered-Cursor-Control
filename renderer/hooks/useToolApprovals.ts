@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { useEffect, useState } from 'react';
 import { ipc } from '../lib/ipc';
 import type { ToolApprovalRequest } from '../../electron/types';

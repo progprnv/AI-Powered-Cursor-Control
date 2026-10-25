@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { MAX_TOKENS } from '../models';
 import type { ContentBlock, Message } from '../prompt';
 import type { ToolDeclaration } from '../tools';

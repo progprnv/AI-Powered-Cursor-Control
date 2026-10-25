@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { popTransition, popVariants } from '../lib/animations';

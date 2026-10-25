@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { Buffer } from 'node:buffer';
 import { getSettings } from '../store/settings';
 import { HTTP_HEADERS_BASE } from '../llm/providers/types';

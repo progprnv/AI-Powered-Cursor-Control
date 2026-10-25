@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { safeStorage } from 'electron';
 import type { ProviderId, ProviderSettings } from '../types';
 

@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { shell } from 'electron';
 import { existsSync } from 'node:fs';
 import { resolve, sep } from 'node:path';

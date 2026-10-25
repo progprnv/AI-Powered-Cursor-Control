@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 /** @type {import('tailwindcss').Config} */
 // AiCursor standalone project configuration.
 module.exports = {

@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { forwardRef, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion, useDragControls } from 'framer-motion';
 import {

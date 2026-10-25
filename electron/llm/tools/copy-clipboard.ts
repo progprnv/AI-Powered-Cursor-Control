@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { clipboard } from 'electron';
 import type { ToolDefinition } from './index';
 

@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 export const MODELS = {
   PRIMARY: 'google/gemini-3-flash-preview',
   FALLBACK: 'google/gemini-3.1-flash-lite-preview',

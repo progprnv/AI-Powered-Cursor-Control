@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ipc } from '../lib/ipc';
 import type { LinkMeta } from '../../electron/types';

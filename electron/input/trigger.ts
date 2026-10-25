@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { uIOhook, UiohookKey, type UiohookKeyboardEvent, type UiohookMouseEvent } from 'uiohook-napi';
 import { screen } from 'electron';
 import { getSettings } from '../store/settings';

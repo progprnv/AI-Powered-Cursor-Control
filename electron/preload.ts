@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { contextBridge, ipcRenderer } from 'electron';
 import type {
   AICursorAPI,

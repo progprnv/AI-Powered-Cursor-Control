@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 type Props = {
   message: string;
   hint?: string;

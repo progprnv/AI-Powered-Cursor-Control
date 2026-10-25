@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useAIMode } from './hooks/useAIMode';

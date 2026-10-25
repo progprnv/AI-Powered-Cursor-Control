@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import Store from 'electron-store';
 import { app } from 'electron';
 import { join } from 'node:path';

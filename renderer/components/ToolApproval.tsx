@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { motion } from 'framer-motion';
 import type { ToolApprovalRequest } from '../../electron/types';
 

@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { fadeQuick, haloSpring, haloVariants } from '../lib/animations';

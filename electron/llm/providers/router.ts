@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { getSettings } from '../../store/settings';
 import { buildMessages, type Message } from '../prompt';
 import { getTemplate } from '../templates';

@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import type { Transition, Variants } from 'framer-motion';
 
 export const haloSpring: Transition = {

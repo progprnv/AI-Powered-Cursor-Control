@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import type { TemplateId } from '../../electron/types';
 
 export type CommandId =

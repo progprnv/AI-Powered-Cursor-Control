@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 export type AIModeState = 'idle' | 'triggering' | 'active_input' | 'active_loading' | 'active_response';
 
 export type TemplateId =

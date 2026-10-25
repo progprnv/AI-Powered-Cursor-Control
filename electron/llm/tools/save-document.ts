@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { saveResponse } from '../../save/save';
 import type { ToolDefinition } from './index';
 

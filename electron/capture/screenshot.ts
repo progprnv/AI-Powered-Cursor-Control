@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { desktopCapturer, screen } from 'electron';
 
 const CROP_W = 1024;

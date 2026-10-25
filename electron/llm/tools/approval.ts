@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 // Tools split into safe (auto-execute) and approval-required (need user
 // confirmation). Safe tools only read data. Approval-required tools take
 // actions on the user's machine (open URL, write clipboard, save file,

@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { app, nativeImage } from 'electron';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';

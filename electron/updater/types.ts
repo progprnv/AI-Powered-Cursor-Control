@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 // Auto-updater types.
 //
 // The manifest at https://aipointer.app/updates/latest.json uses flat platform

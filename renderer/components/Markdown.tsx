@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import ReactMarkdown, { type Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';

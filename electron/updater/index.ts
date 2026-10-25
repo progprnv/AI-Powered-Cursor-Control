@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { app, BrowserWindow } from 'electron';
 import { checkForUpdate, ManifestUnavailableError } from './check';
 import { downloadAsset } from './download';

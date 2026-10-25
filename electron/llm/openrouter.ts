@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 // Backwards-compat re-exports so older imports keep working while we migrate
 // to the new provider router.
 export {

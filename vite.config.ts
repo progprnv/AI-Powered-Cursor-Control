@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import electron from 'vite-plugin-electron/simple';

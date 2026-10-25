@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { motion, AnimatePresence } from 'framer-motion';
 import type { ToolActivityRow } from '../hooks/useLLMQuery';
 

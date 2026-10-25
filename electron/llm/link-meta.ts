@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { URL } from 'node:url';
 import { lookup } from 'node:dns/promises';
 import { isIP } from 'node:net';

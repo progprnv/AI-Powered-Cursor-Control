@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { openRouterProvider } from './openrouter';
 import { anthropicProvider } from './anthropic';
 import { openaiProvider } from './openai';

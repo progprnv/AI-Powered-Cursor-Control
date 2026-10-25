@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { lookup } from 'node:dns/promises';
 import { isIP } from 'node:net';
 import { fetchLinkMeta } from '../link-meta';

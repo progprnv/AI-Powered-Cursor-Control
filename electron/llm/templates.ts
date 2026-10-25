@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 // Slash-command templates. Each pairs a CommandId with a custom system prompt
 // that primes Gemini for a specific response style. The user's typed args
 // become the user prompt; the screenshot + clipboard are still attached.

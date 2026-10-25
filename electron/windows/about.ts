@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { BrowserWindow, shell, app } from 'electron';
 import { promises as fsp } from 'node:fs';
 import { getAppIconPath } from '../tray/icon';

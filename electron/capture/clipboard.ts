@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { clipboard } from 'electron';
 
 const MAX_CLIPBOARD_CHARS = 4000;

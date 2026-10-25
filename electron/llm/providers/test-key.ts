@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { net } from 'electron';
 import type { ProviderId } from '../../types';
 

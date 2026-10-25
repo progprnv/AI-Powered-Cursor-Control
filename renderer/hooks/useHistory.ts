@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { useCallback, useState } from 'react';
 import { ipc } from '../lib/ipc';
 import type { SessionSummary } from '../../electron/types';

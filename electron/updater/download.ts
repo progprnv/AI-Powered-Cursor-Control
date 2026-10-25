@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { app } from 'electron';
 import { createHash } from 'node:crypto';
 import { createReadStream, createWriteStream, promises as fs } from 'node:fs';

@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { app } from 'electron';
 import { request } from 'node:https';
 import { URL } from 'node:url';

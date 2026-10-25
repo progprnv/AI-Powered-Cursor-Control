@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import type { ProviderRoundResult } from './types';
 
 // Shared SSE parser for OpenAI-compatible chat completions streams.

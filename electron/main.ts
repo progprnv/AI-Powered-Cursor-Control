@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { app, BrowserWindow, dialog, screen } from 'electron';
 import { promises as fsp } from 'node:fs';
 

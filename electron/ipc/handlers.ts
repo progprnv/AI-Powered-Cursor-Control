@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { app, dialog, ipcMain, screen, shell, BrowserWindow } from 'electron';
 import { CHANNELS } from './channels';
 import { getAllOverlays, getOverlayEntries, getOverlayForDisplay, setOverlayInteractive, setAllOverlaysAlwaysOnTop } from '../windows/overlay';

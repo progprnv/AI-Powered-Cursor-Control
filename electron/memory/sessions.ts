@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { promises as fs } from 'node:fs';
 import { join, relative } from 'node:path';
 import type { Message } from '../llm/prompt';

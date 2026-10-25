@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { screen } from 'electron';
 import { broadcastCursorPosition } from '../ipc/handlers';
 

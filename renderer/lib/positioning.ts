@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 export const PROMPT_WIDTH = 440;
 export const PROMPT_HEIGHT = 56;
 export const PROMPT_MAX_HEIGHT = 380;

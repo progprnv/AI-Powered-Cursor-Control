@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { Menu, Tray, app, shell } from 'electron';
 import { getTrayIcon } from './icon';
 import { broadcastSettingsOpen, triggerAIModeFromMenu } from '../ipc/handlers';

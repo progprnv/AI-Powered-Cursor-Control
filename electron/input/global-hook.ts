@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { uIOhook } from 'uiohook-napi';
 
 let started = false;

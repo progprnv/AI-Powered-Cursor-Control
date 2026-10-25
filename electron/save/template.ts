@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { marked } from 'marked';
 
 function escapeHtml(s: string): string {

@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 export const CHANNELS = {
   AIModeStart: 'ai-mode:start',
   AIModeEnd: 'ai-mode:end',

@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { BrowserWindow, app, screen, shell, type Display } from 'electron';
 import { join } from 'node:path';
 

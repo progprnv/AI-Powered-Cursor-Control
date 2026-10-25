@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import type { AICursorAPI } from '../../electron/types';
 
 function getApi(): AICursorAPI {

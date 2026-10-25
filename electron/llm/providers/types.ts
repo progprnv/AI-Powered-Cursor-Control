@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import type { Message } from '../prompt';
 import type { ToolDeclaration } from '../tools';
 

@@ -1,3 +1,4 @@
+// AiCursor standalone project file.
 import { BrowserWindow, dialog } from 'electron';
 import { promises as fs } from 'node:fs';
 import { join } from 'node:path';
