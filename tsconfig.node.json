@@ -1,4 +1,5 @@
 {
+  // AiCursor standalone project configuration.
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["ES2022"],

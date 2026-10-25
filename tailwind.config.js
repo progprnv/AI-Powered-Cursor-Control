@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// AiCursor standalone project configuration.
 module.exports = {
   darkMode: 'class',
   content: ['./renderer/**/*.{ts,tsx,html}'],

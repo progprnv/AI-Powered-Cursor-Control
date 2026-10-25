@@ -15,7 +15,7 @@
   <!--
     Library validation needs to be disabled so native modules signed by
     other identities (sharp's libvips, uiohook-napi's input library) can
-    load alongside the AIPointer binary signed by Mario's Developer ID.
+    load alongside the AiCursor binary signed by Mario's Developer ID.
   -->
   <key>com.apple.security.cs.disable-library-validation</key>
   <true/>
@@ -39,7 +39,7 @@
   <true/>
 
   <!--
-    Camera is intentionally false. AIPointer does not use the camera.
+    Camera is intentionally false. AiCursor does not use the camera.
     Leaving the key present with false makes the negative explicit so a
     future entitlements diff catches an accidental flip.
   -->

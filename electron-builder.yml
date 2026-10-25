@@ -1,5 +1,6 @@
 # electron-builder.yml
 # AICursor v1.0.0 packaging config.
+# Standalone project packaging configuration.
 # Docs: https://www.electron.build/configuration/configuration
 #
 # Sign / notarize are env-gated. The release-build.sh script can also override
